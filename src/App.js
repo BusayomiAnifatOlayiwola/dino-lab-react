@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
+  //make variable before return
+  const name = 'yomi';
+  const post ={
+    title: 'Dinosaurs are awesome',
+    author: 'Stealthy Stegosaurus',
+    body: 'Check out this body properity!',
+    comments: 'First!'
+   // comments: ['First!', 'Great post', 'Hire this author now!']
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* can use variable with curly braces*/}
+      <p>{name}</p>
+      <p>{post}</p>
     </div>
   );
 }
