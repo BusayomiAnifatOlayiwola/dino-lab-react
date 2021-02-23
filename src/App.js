@@ -16,7 +16,10 @@ function App() {
     <div className="App">
       {/* can use variable with curly braces*/}
       <p>{name}</p>
-      <p>{post}</p>
+      <p>{post.title}</p>
+      <p>{post.author}</p>
+      <p>{post.body}</p>
+      <p>{post.comments}</p>
     </div>
   );
 }
