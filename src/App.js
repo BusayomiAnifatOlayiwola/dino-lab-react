@@ -1,4 +1,4 @@
-
+import Comment from './Comment';
 import './App.css';
 
 function App() {
@@ -8,18 +8,20 @@ function App() {
     title: 'Dinosaurs are awesome',
     author: 'Stealthy Stegosaurus',
     body: 'Check out this body properity!',
-    comments: 'First!'
-   // comments: ['First!', 'Great post', 'Hire this author now!']
+   comments: ['First!', 'Great post', 'Hire this author now!']
   }
 
+  const comments = post.comments.map(comment=> (<Comment text={comment}/>))
   return (
     <div className="App">
       {/* can use variable with curly braces*/}
       <p>{name}</p>
-      <p>{post.title}</p>
-      <p>{post.author}</p>
+      <h1>{post.title}</h1>
+      <p>by {post.author}</p>
       <p>{post.body}</p>
-      <p>{post.comments}</p>
+      <h3>Comments:</h3>
+      <p>{post.comments[0]}</p>
+      {comments}
     </div>
   );
 }
